@@ -15,5 +15,3 @@ https://www.npmjs.com/package/@faker-js/faker
     npm install --save-dev @faker-js/faker
     npm install dotenv
 
-
-## 
