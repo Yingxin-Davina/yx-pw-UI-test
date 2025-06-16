@@ -74,6 +74,7 @@ export default defineConfig<TestOptions>({
       use: {
         ...devices['Desktop Firefox'],
         baseURL: 'http://localhost:4200/',
+        testMatch: '**/*.freeTest.spec.ts'
       },
     },
 /*

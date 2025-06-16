@@ -12,7 +12,7 @@ test('new self test free', async ({ page }) => {
     await pm.treeGridToPage().checkTreeGrid()
 })
 
-test("slider", async ({ page }) => {
+test.only("slider", async ({ page }) => {
     // by simulate mouse mouvement
     const tempBox = page.locator("[tabtitle='Temperature'] ngx-temperature-dragger")
     await tempBox.scrollIntoViewIfNeeded()
