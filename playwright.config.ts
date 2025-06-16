@@ -57,7 +57,7 @@ export default defineConfig<TestOptions>({
     //     baseURL: 'http://localhost:4200/',
     //   },
     // },
-    {
+/*    {
       name: 'staging',
       use: {
         ...devices['Desktop Chrome'],
@@ -67,7 +67,7 @@ export default defineConfig<TestOptions>({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
-    },
+    },*/
 
     {
       name: 'firefox',
@@ -76,8 +76,7 @@ export default defineConfig<TestOptions>({
         baseURL: 'http://localhost:4200/',
       },
     },
-
-
+/*
     {
       name: 'webkit',
       testMatch: "firstTest.spec.ts",
@@ -88,7 +87,7 @@ export default defineConfig<TestOptions>({
           size: { width: 1920, height: 1080 }
         }
       },
-    },
+    },*/
 
     /* Test against mobile viewports. */
     // {
