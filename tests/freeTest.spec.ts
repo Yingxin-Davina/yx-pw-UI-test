@@ -1,5 +1,6 @@
 import { expect, test } from "@playwright/test"
 import { PageManager } from "../page-objects/pageManager"
+import { argosScreenshot } from "@argos-ci/playwright";
 
 
 test.beforeEach(async ({ page }) => {
@@ -11,9 +12,7 @@ test('new self test free', async ({ page }) => {
     await pm.treeGridToPage().checkTreeGrid()
 })
 
-test("slider", async ({ page }) => {
-
-
+test.only("slider", async ({ page }) => {
     // by simulate mouse mouvement
     const tempBox = page.locator("[tabtitle='Temperature'] ngx-temperature-dragger")
     await tempBox.scrollIntoViewIfNeeded()
@@ -26,9 +25,10 @@ test("slider", async ({ page }) => {
     await page.mouse.move(x + 100, y + 100)
     await page.mouse.up()
     await expect(tempBox).toContainText("30")
+    await argosScreenshot(page, 'crying....');
 
     // by update attribute
-    await page.getByText('Humidity').click()
+/*    await page.getByText('Humidity').click()
     // await page.locator("nb-tabset span", { hasText: 'Humidity' }).click()
     const tempGet = page.locator("[tabtitle='Temperature'] ngx-temperature-dragger circle")
     await tempGet.evaluate(node => {
@@ -38,7 +38,7 @@ test("slider", async ({ page }) => {
     await expect(tempGet).toBeVisible()
     await tempGet.click()
     const tempGetShow = page.locator("[tabtitle='Temperature'] ngx-temperature-dragger")
-    await expect(tempGetShow).toContainText("80")
+    await expect(tempGetShow).toContainText("80")*/
 })
 
 

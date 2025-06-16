@@ -9,6 +9,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "argos-test-firefox": "npx playwright test freeTest.spec.ts --project=firefox",
     "pageObjects-firefox": "npx playwright test usePageObjects.spec.ts --project=firefox"
   },
   "dependencies": {
